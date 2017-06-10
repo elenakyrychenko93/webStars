@@ -1,0 +1,121 @@
+@media screen and (max-width: 500px) {
+  .head-wrapper {
+    padding:0;
+    .search, .contacts {
+      display: none!important;
+    }
+    .logo {
+      padding:12px 15px;
+    }
+    .panel {
+      display: none!important;
+    }
+    .menu-wrapper {
+      display: none;
+    }
+    .mobile-menu {
+      display: block;
+      ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        li {
+          width:20%;
+          line-height: 40px;
+          text-align: center;
+          background-color: #f0f1f6;
+          padding:0;
+          margin:0;
+          :hover {
+            background-color: #3eade2;
+          }
+          a{
+            //height: 100%;
+            display:block;
+            img {
+              padding: 0 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  main {
+    .slider {
+      margin: 0 auto;
+      z-index: 1;
+      div {
+        //height: 125px;
+        position: relative;
+        img {
+          width:100%;
+          transform: translateY(0%);
+          z-index: 1;
+        }
+        .slider-content {
+          position: absolute;
+          content:"";
+          top:0;
+          margin: 0 40px;
+          p {
+            position: absolute;
+            top:30%;
+            padding: 10px 10px;
+            font-size: 15px;
+            width: 200px;
+          }
+        }
+      }
+      .slick-next, .slick-prev {
+        background-color: #d3a36f;
+        height:40px;
+        top:30%;
+        transform:translateY(-50%);
+        width:30px;
+        transition: 0.5s;
+        &:before {
+          position: absolute;
+          top:50%;
+          left:50%;
+          height:30px;
+          width:15px;
+          transform:translate(-50%, -50%);
+          background-repeat: no-repeat;
+          content:"";
+
+        }
+      }
+      .slick-next {
+        right:0;
+        &:before {
+          background-image: url("../../assets/img/slider/slider-arrow-white.png");
+          background-position-x: right;
+        }
+        &:hover {
+          background-color: white;
+          &:before {
+            background-image: url("../../assets/img/slider/slider-arrow.png");
+          }
+        }
+      }
+      .slick-prev {
+        left:0;
+        z-index: 1;
+        &:before {
+          background-image: url("../../assets/img/slider/slider-arrow-white.png");
+          background-position-x: left;
+        }
+        &:hover {
+          background-color: white;
+          &:before {
+            background-image: url("../../assets/img/slider/slider-arrow.png");
+          }
+        }
+      }
+    }
+  }
+
+
+}
